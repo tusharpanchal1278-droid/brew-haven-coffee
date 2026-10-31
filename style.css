@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf4;
+    color: #3b2419;
+    line-height: 1.6;
+}
+
+.navbar {
+    background: #3b2419;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: #f4c58a;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: #f4c58a;
+}
+
+.hero {
+    min-height: 480px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    color: white;
+    background: linear-gradient(
+        90deg,
+        rgba(40, 23, 14, 0.9),
+        rgba(40, 23, 14, 0.3)
+    ), url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1400&q=80") center/cover;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.tagline {
+    color: #f4c58a;
+    letter-spacing: 3px;
+}
+
+.btn {
+    display: inline-block;
+    background: #a66335;
+    color: white;
+    padding: 12px 24px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.welcome {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.welcome h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(200px, 1fr)
+    );
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px #3b241915;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+footer {
+    background: #3b2419;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 25px;
+    text-align: center;
+}
+
+.page h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.page h2 {
+    margin: 25px 0 10px;
+}
+
+.price {
+    color: #a66335;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.photo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+form {
+    max-width: 500px;
+    margin: 25px auto;
+    display: grid;
+    gap: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    border: 1px solid #d7c4b5;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px;
+    background: #a66335;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+}
