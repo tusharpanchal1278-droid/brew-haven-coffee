@@ -1,11 +1,8 @@
 
-/* =====================================
-   BREW HAVEN COFFEE SHOP WEBSITE
-   Project Created By: Tushar
-   Roll Number: 267207
-   ===================================== */
+/* BREW HAVEN COFFEE SHOP */
+/* Created by: Tushar */
+/* Roll Number: 267207 */
 
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -18,15 +15,14 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #fffaf4;
+    background: #fffaf4;
     color: #3e2723;
     line-height: 1.6;
 }
 
-/* Navigation Bar */
+/* Navigation */
 .navbar {
-    background-color: #3e2723;
-    color: white;
+    background: #3e2723;
     padding: 18px 7%;
     display: flex;
     justify-content: space-between;
@@ -37,114 +33,123 @@ body {
 
 .logo {
     color: #f5c58b;
-    font-size: 25px;
+    font-size: 26px;
     font-weight: bold;
     text-decoration: none;
 }
 
 .links {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 18px;
 }
 
 .links a {
     color: white;
     text-decoration: none;
-    font-size: 15px;
-    transition: color 0.3s;
 }
 
 .links a:hover {
     color: #f5c58b;
 }
 
-/* Home Hero Section */
-.hero {
-    min-height: 75vh;
-    padding: 90px 8%;
-    background: linear-gradient(
-        135deg,
-        #4e342e,
-        #795548,
-        #a1887f
-    );
-    color: white;
+/* Coffee Poster with Photo Background */
+.coffee-poster {
+    min-height: 650px;
+    padding: 70px 25px;
     text-align: center;
+    color: white;
+
+    background-image:
+        linear-gradient(
+            rgba(35, 20, 14, 0.60),
+            rgba(35, 20, 14, 0.70)
+        ),
+        url("coffee-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.tagline {
-    color: #e7b778;
+/* Poster Text */
+.poster-tag {
+    color: #f5c58b;
+    font-size: 14px;
     font-weight: bold;
     letter-spacing: 3px;
-    font-size: 13px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.hero h1 {
-    font-size: 46px;
+.coffee-poster h1 {
+    color: #f5c58b;
+    font-size: clamp(38px, 7vw, 75px);
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
-.hero > p:not(.tagline) {
+.coffee-poster h2 {
+    color: white;
+    font-size: clamp(23px, 4vw, 40px);
+    margin-bottom: 20px;
+}
+
+.poster-description {
     max-width: 650px;
-    margin-bottom: 25px;
-    font-size: 17px;
+    margin-bottom: 30px;
+    font-size: 18px;
 }
 
 /* Buttons */
 .btn,
 button {
     display: inline-block;
-    background-color: #d9a066;
+    background: #d9a066;
     color: #3e2723;
-    padding: 12px 25px;
+    padding: 13px 26px;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: 7px;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: 0.3s;
 }
 
 .btn:hover,
 button:hover {
-    background-color: #f5c58b;
-    transform: translateY(-2px);
+    background: #f5c58b;
+    transform: translateY(-3px);
 }
 
 /* Student Details */
 .student-details {
-    margin-top: 30px;
-    padding: 15px 22px;
-    border: 1px solid rgba(255, 255, 255, 0.45);
+    margin-top: 35px;
+    padding: 15px 25px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid #f5c58b;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.15);
-    color: #ffffff;
-    font-size: 16px;
+    color: white;
     font-weight: bold;
-    text-align: center;
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
-/* Welcome and Common Sections */
+/* General Sections */
 .welcome,
 .page {
-    padding: 60px 8%;
+    padding: 55px 8%;
     text-align: center;
 }
 
 .welcome h2,
 .page h1 {
+    color: #5d4037;
     font-size: 32px;
     margin-bottom: 20px;
-    color: #5d4037;
 }
 
 .welcome > p,
@@ -157,15 +162,16 @@ button:hover {
 .cards {
     display: flex;
     justify-content: center;
+    align-items: stretch;
     gap: 25px;
     flex-wrap: wrap;
     margin-top: 30px;
 }
 
 .card {
-    background-color: white;
     width: 280px;
     padding: 25px;
+    background: white;
     border-radius: 12px;
     box-shadow: 0 4px 14px rgba(62, 39, 35, 0.12);
     transition: transform 0.3s;
@@ -188,30 +194,29 @@ button:hover {
     margin-top: 12px;
 }
 
-/* Gallery Images */
+/* Gallery */
 .photo {
     width: 280px;
-    background-color: white;
-    border-radius: 12px;
     overflow: hidden;
+    background: white;
+    border-radius: 12px;
     box-shadow: 0 4px 14px rgba(62, 39, 35, 0.12);
-    transition: transform 0.3s;
-}
-
-.photo:hover {
-    transform: scale(1.03);
 }
 
 .photo img {
-    display: block;
     width: 100%;
     height: 210px;
     object-fit: cover;
+    display: block;
 }
 
 .photo p {
     padding: 12px;
     font-weight: bold;
+}
+
+.photo:hover {
+    transform: scale(1.02);
 }
 
 /* About Page */
@@ -223,7 +228,7 @@ button:hover {
 /* Contact Form */
 form {
     max-width: 550px;
-    margin: 30px auto 0;
+    margin: 30px auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -235,30 +240,21 @@ textarea {
     padding: 14px;
     border: 1px solid #c9b7a7;
     border-radius: 6px;
-    background-color: white;
-    color: #3e2723;
-    font-family: inherit;
-    font-size: 15px;
+    font: inherit;
 }
 
 input:focus,
 textarea:focus {
     outline: 2px solid #d9a066;
-    border-color: #9b5b27;
 }
 
 textarea {
     resize: vertical;
 }
 
-form button {
-    align-self: center;
-    min-width: 170px;
-}
-
 /* Footer */
 footer {
-    background-color: #3e2723;
+    background: #3e2723;
     color: white;
     text-align: center;
     padding: 25px 15px;
@@ -269,7 +265,7 @@ footer p {
     margin: 5px 0;
 }
 
-/* Responsive Design for Mobile */
+/* Mobile Responsive */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -281,31 +277,18 @@ footer p {
         gap: 12px;
     }
 
-    .links a {
-        font-size: 14px;
+    .coffee-poster {
+        min-height: 600px;
+        padding: 50px 18px;
     }
 
-    .hero {
-        min-height: 65vh;
-        padding: 65px 6%;
-    }
-
-    .hero h1 {
-        font-size: 34px;
-    }
-
-    .hero > p:not(.tagline) {
+    .poster-description {
         font-size: 16px;
     }
 
     .welcome,
     .page {
-        padding: 45px 6%;
-    }
-
-    .welcome h2,
-    .page h1 {
-        font-size: 27px;
+        padding: 40px 6%;
     }
 
     .card,
