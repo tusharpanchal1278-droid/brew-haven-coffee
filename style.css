@@ -1,19 +1,33 @@
+
+/* =====================================
+   BREW HAVEN COFFEE SHOP WEBSITE
+   Project Created By: Tushar
+   Roll Number: 267207
+   ===================================== */
+
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #fffaf4;
-    color: #3b2419;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffaf4;
+    color: #3e2723;
     line-height: 1.6;
 }
 
+/* Navigation Bar */
 .navbar {
-    background: #3b2419;
-    padding: 20px 5%;
+    background-color: #3e2723;
+    color: white;
+    padding: 18px 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,156 +36,281 @@ body {
 }
 
 .logo {
-    color: #f4c58a;
-    font-size: 24px;
+    color: #f5c58b;
+    font-size: 25px;
     font-weight: bold;
     text-decoration: none;
 }
 
 .links {
     display: flex;
+    gap: 20px;
     flex-wrap: wrap;
-    gap: 18px;
 }
 
 .links a {
     color: white;
     text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
 }
 
 .links a:hover {
-    color: #f4c58a;
+    color: #f5c58b;
 }
 
+/* Home Hero Section */
 .hero {
-    min-height: 480px;
-    padding: 70px 8%;
-    display: flex;
-    align-items: center;
-    color: white;
+    min-height: 75vh;
+    padding: 90px 8%;
     background: linear-gradient(
-        90deg,
-        rgba(40, 23, 14, 0.9),
-        rgba(40, 23, 14, 0.3)
-    ), url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1400&q=80") center/cover;
-}
-
-.hero h1 {
-    font-size: 48px;
-    line-height: 1.2;
-    margin: 15px 0;
+        135deg,
+        #4e342e,
+        #795548,
+        #a1887f
+    );
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .tagline {
-    color: #f4c58a;
+    color: #e7b778;
+    font-weight: bold;
     letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 15px;
 }
 
-.btn {
+.hero h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero > p:not(.tagline) {
+    max-width: 650px;
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+/* Buttons */
+.btn,
+button {
     display: inline-block;
-    background: #a66335;
-    color: white;
-    padding: 12px 24px;
-    margin-top: 20px;
+    background-color: #d9a066;
+    color: #3e2723;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
     text-decoration: none;
-    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.welcome {
+.btn:hover,
+button:hover {
+    background-color: #f5c58b;
+    transform: translateY(-2px);
+}
+
+/* Student Details */
+.student-details {
+    margin-top: 30px;
+    padding: 15px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.15);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* Welcome and Common Sections */
+.welcome,
+.page {
     padding: 60px 8%;
     text-align: center;
 }
 
-.welcome h2 {
+.welcome h2,
+.page h1 {
     font-size: 32px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    color: #5d4037;
 }
 
+.welcome > p,
+.page > p {
+    max-width: 750px;
+    margin: 0 auto 18px;
+}
+
+/* Cards */
 .cards {
-    display: grid;
-    grid-template-columns: repeat(
-        auto-fit, minmax(200px, 1fr)
-    );
-    gap: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
     margin-top: 30px;
 }
 
 .card {
-    background: white;
+    background-color: white;
+    width: 280px;
     padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px #3b241915;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(62, 39, 35, 0.12);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card h3 {
-    margin-bottom: 10px;
+    color: #795548;
+    margin-bottom: 12px;
 }
 
-footer {
-    background: #3b2419;
-    color: white;
-    text-align: center;
-    padding: 25px;
-}
-
-.page {
-    max-width: 1100px;
-    margin: auto;
-    padding: 60px 25px;
-    text-align: center;
-}
-
-.page h1 {
-    font-size: 38px;
-    margin-bottom: 20px;
-}
-
-.page h2 {
-    margin: 25px 0 10px;
-}
-
+/* Menu Prices */
 .price {
-    color: #a66335;
+    color: #9b5b27;
     font-size: 20px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+/* Gallery Images */
+.photo {
+    width: 280px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(62, 39, 35, 0.12);
+    transition: transform 0.3s;
+}
+
+.photo:hover {
+    transform: scale(1.03);
+}
+
+.photo img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.photo p {
+    padding: 12px;
     font-weight: bold;
 }
 
-.photo {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
+/* About Page */
+.page h2 {
+    color: #795548;
+    margin: 25px 0 12px;
 }
 
+/* Contact Form */
 form {
-    max-width: 500px;
-    margin: 25px auto;
-    display: grid;
+    max-width: 550px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
     gap: 15px;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
-    padding: 12px;
-    font: inherit;
-    border: 1px solid #d7c4b5;
-    border-radius: 5px;
+    padding: 14px;
+    border: 1px solid #c9b7a7;
+    border-radius: 6px;
+    background-color: white;
+    color: #3e2723;
+    font-family: inherit;
+    font-size: 15px;
 }
 
-button {
-    padding: 12px;
-    background: #a66335;
+input:focus,
+textarea:focus {
+    outline: 2px solid #d9a066;
+    border-color: #9b5b27;
+}
+
+textarea {
+    resize: vertical;
+}
+
+form button {
+    align-self: center;
+    min-width: 170px;
+}
+
+/* Footer */
+footer {
+    background-color: #3e2723;
     color: white;
-    border: none;
-    cursor: pointer;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 20px;
 }
 
-@media (max-width: 600px) {
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
     .navbar {
         flex-direction: column;
+        padding: 18px 5%;
+    }
+
+    .links {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .links a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 65vh;
+        padding: 65px 6%;
     }
 
     .hero h1 {
-        font-size: 36px;
+        font-size: 34px;
+    }
+
+    .hero > p:not(.tagline) {
+        font-size: 16px;
+    }
+
+    .welcome,
+    .page {
+        padding: 45px 6%;
+    }
+
+    .welcome h2,
+    .page h1 {
+        font-size: 27px;
+    }
+
+    .card,
+    .photo {
+        width: 100%;
+        max-width: 350px;
     }
 }
